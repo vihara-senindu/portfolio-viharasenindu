@@ -42,6 +42,7 @@ src/
 └── App.jsx              # Main component layout
 public/                  # Static assets (images, icons)
 
+```
 
 Follow these steps to set up the project locally on your machine.
 
