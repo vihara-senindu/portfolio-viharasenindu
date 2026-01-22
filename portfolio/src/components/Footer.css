@@ -11,7 +11,6 @@ footer {
   opacity: 0.8;
 }
 
-/* --- Heart Animation --- */
 .heart-icon {
   display: inline-block;
   animation: brightPulse 1.5s infinite ease-in-out;
@@ -30,7 +29,6 @@ footer {
   }
 }
 
-/* --- Light Mode Overrides --- */
 body.light-mode footer {
   background: rgba(255, 255, 255, 0.8);
   border-color: rgba(0, 0, 0, 0.1);

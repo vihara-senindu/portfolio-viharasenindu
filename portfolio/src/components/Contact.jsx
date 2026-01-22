@@ -9,7 +9,6 @@ const Contact = () => {
     e.preventDefault();
     setBtnText("Sending...");
     
-    // Simulate API call
     setTimeout(() => {
       alert("Message Sent Secretly! (This is a demo)");
       e.target.reset();
@@ -24,7 +23,6 @@ const Contact = () => {
         <div className="contact-left">
           <h3>Let's Chat!</h3>
           <p>Whether you have a question, want to collaborate, or just want to say hi...</p>
-          {/* Add social links here */}
         </div>
 
         <div className="contact-right">

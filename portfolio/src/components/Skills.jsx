@@ -3,7 +3,6 @@ import "./Skills.css";
 import React from "react";
 
 const Skills = () => {
-  // 1. List of Tech Icons (from #skills section)
   const techSkills = [
     { icon: "fab fa-html5", name: "HTML5" },
     { icon: "fab fa-css3-alt", name: "CSS3" },
@@ -22,7 +21,6 @@ const Skills = () => {
     { icon: "fab fa-java", name: "Java" },
   ];
 
-  // 2. List of Skill Details (Text descriptions)
   const skillDetails = [
     {
       icon: "fas fa-laptop-code",
@@ -46,7 +44,6 @@ const Skills = () => {
     },
   ];
 
-  // 3. List of Proficiency Bars (from #proficiency section)
   const proficiencies = [
     { label: "Html / Css", pct: "90%" },
     { label: "JavaScript", pct: "70%" },
@@ -63,7 +60,6 @@ const Skills = () => {
 
   return (
     <>
-      {/* --- SKILLS ICONS & DETAILS SECTION --- */}
       <section className="section-wrapper" id="skills">
         <div className="glass-container">
           <div className="section-image">
@@ -76,7 +72,6 @@ const Skills = () => {
               passion for exploring innovative solutions.
             </p>
 
-            {/* Grid of Icons */}
             <div className="tech-icons-grid">
               {techSkills.map((tech, index) => (
                 <div className="tech-item" key={index}>
@@ -86,7 +81,6 @@ const Skills = () => {
               ))}
             </div>
 
-            {/* Detailed Text Rows */}
             <div className="skills-details">
               {skillDetails.map((skill, index) => (
                 <div
@@ -106,7 +100,6 @@ const Skills = () => {
         </div>
       </section>
 
-      {/* --- PROFICIENCY PROGRESS BARS SECTION --- */}
       <section className="section-wrapper" id="proficiency">
         <div className="glass-container reverse-layout">
           <div className="section-content">
@@ -129,7 +122,6 @@ const Skills = () => {
             </div>
           </div>
           <div className="section-image">
-            {/* Note: The filename in original HTML had a space "Proficiency .png" */}
             <img
               src="./Web Images/Proficiency .png"
               alt="Proficiency Illustration"

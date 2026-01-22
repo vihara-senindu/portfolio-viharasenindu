@@ -18,7 +18,6 @@
   backdrop-filter: blur(10px);
 }
 
-/* Top colored border bar */
 .ach-card::before {
   content: "";
   position: absolute;
@@ -69,7 +68,7 @@
   font-size: 1.1rem;
   margin-bottom: 20px;
   color: #fff;
-  min-height: 3rem; /* Aligns buttons even if title length varies */
+  min-height: 3rem; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,7 +97,6 @@
   font-weight: 600;
 }
 
-/* --- Light Mode Overrides --- */
 body.light-mode .ach-card {
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.05);

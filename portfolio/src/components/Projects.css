@@ -1,4 +1,3 @@
-/* Shared Grid Layout */
 .projects-grid, .design-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -6,7 +5,6 @@
   margin-bottom: 40px;
 }
 
-/* --- Project Card Styling --- */
 .project-card, .design-card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -18,7 +16,6 @@
   position: relative;
 }
 
-/* Hover Lift Effect */
 .project-card:hover, .design-card:hover {
   transform: translateY(-10px);
   background: rgba(255, 255, 255, 0.08);
@@ -26,7 +23,6 @@
   border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* --- Design Card Specifics (Images) --- */
 .design-img-container {
   width: 100%;
   height: 220px;
@@ -41,12 +37,10 @@
   transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Zoom Image on Hover */
 .design-card:hover .design-img-container img {
   transform: scale(1.1);
 }
 
-/* Overlay Gradient on Image */
 .design-img-container::after {
   content: "";
   position: absolute;
@@ -79,7 +73,6 @@
   line-height: 1.6;
 }
 
-/* Neon Button */
 .btn-design {
   align-self: flex-start;
   padding: 8px 20px;
@@ -99,7 +92,6 @@
   box-shadow: 0 0 15px var(--accent-purple);
 }
 
-/* --- Open Source Card Specifics (Code) --- */
 .project-card { padding: 25px; }
 
 .project-header {
@@ -138,12 +130,11 @@
   margin-right: 5px;
 }
 
-/* --- Light Mode Overrides --- */
 body.light-mode .project-card, 
 body.light-mode .design-card {
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid rgba(255, 255, 255, 1);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Soft shadow for depth */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 body.light-mode .project-header h3,
@@ -163,7 +154,6 @@ body.light-mode .design-card:hover {
   border-color: var(--accent-secondary);
 }
 
-/* Make the Open Source icon pop */
 body.light-mode .book-icon {
   color: var(--accent-secondary);
 }

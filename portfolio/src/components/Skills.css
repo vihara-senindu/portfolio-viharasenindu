@@ -1,4 +1,3 @@
-/* --- Icons Grid --- */
 .tech-icons-grid {
   display: flex;
   flex-wrap: wrap;
@@ -35,7 +34,6 @@
   transition: all 0.3s ease;
 }
 
-/* Hover Effect: Icon glows and text slides up */
 .tech-item:hover {
   background: rgba(255, 255, 255, 0.08);
   border-color: var(--accent-color);
@@ -54,7 +52,6 @@
   transform: translateY(0);
 }
 
-/* --- Detailed Skills Rows --- */
 .skills-details {
   display: flex;
   flex-direction: column;
@@ -80,7 +77,6 @@
   color: var(--accent-secondary);
 }
 
-/* --- Animated Progress Bars --- */
 .progress-bars-container {
   display: flex;
   flex-direction: column;
@@ -101,7 +97,7 @@
   height: 10px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  overflow: hidden; /* Keeps the animation inside */
+  overflow: hidden; 
   position: relative;
 }
 
@@ -114,7 +110,6 @@
   animation: fillBar 1.5s ease-out forwards;
 }
 
-/* The "Shimmer" Animation on the bar */
 .progress-fill::after {
   content: "";
   position: absolute;
@@ -140,7 +135,6 @@
 @keyframes fillBar { from { width: 0; } }
 @keyframes stripeMove { 0% { background-position: 0 0; } 100% { background-position: 20px 20px; } }
 
-/* --- Light Mode Overrides --- */
 body.light-mode .tech-item {
   background: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(0,0,0,0.05);

@@ -68,13 +68,11 @@ header {
   z-index: 1001;
 }
 
-/* Light Mode Overrides */
 body.light-mode header { background: rgba(255, 255, 255, 0.8); }
 body.light-mode .nav-links li a { color: #333; }
 body.light-mode .theme-toggle { background: #ccc; color: #333; }
 body.light-mode .hamburger { color: #333; }
 
-/* Mobile Menu */
 @media (max-width: 900px) {
   header { padding: 15px 5%; }
   .hamburger { display: block; }

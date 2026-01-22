@@ -2,10 +2,9 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 80px;
-  align-items: flex-start; /* Aligns items to top */
+  align-items: flex-start; 
 }
 
-/* --- Left Side (Info) --- */
 .contact-left {
   flex: 1;
 }
@@ -50,7 +49,6 @@
   justify-content: flex-start;
 }
 
-/* --- Right Side (Form) --- */
 .contact-right {
   flex: 1.2;
   background: rgba(255, 255, 255, 0.03);
@@ -132,7 +130,6 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* --- Light Mode Overrides --- */
 body.light-mode .contact-right {
   background: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.8);

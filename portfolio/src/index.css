@@ -37,7 +37,6 @@ ul {
   list-style: none;
 }
 
-/* --- Global Utility Classes --- */
 .section-wrapper {
   padding: 80px 10%;
   position: relative;
@@ -98,7 +97,6 @@ ul {
   margin-bottom: 50px;
 }
 
-/* --- Buttons --- */
 .btn {
   padding: 12px 30px;
   border-radius: 50px;
@@ -129,7 +127,6 @@ ul {
   text-align: center;
 }
 
-/* --- Animations --- */
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -148,7 +145,6 @@ ul {
   20%, 40% { transform: rotate(-8deg); }
 }
 
-/* --- Light Mode Globals --- */
 body.light-mode {
   background: linear-gradient(-45deg, #e0eafc, #cfdef3, #e2ebf0, #ffffff);
   background-size: 400% 400%;
@@ -168,7 +164,6 @@ body.light-mode p {
   opacity: 1;
 }
 
-/* --- Global Media Queries --- */
 @media (max-width: 900px) {
   .section-wrapper { padding: 60px 5%; }
   .glass-container {

@@ -1,19 +1,17 @@
-/* Container for the timeline */
 .education-list {
   display: flex;
   flex-direction: column;
   gap: 30px;
   position: relative;
-  padding-left: 20px; /* Space for the timeline line */
+  padding-left: 20px; 
 }
 
-/* The Vertical Gradient Line */
 .education-list::before {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 6px; /* Aligns line with the dots */
+  left: 6px; 
   width: 4px;
   background: linear-gradient(
     to bottom,
@@ -25,38 +23,35 @@
   opacity: 0.6;
 }
 
-/* Individual Education Cards */
 .edu-card {
   display: flex;
   gap: 20px;
   padding: 25px;
-  background: rgba(255, 255, 255, 0.03); /* Very subtle glass */
+  background: rgba(255, 255, 255, 0.03); 
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   position: relative;
-  margin-left: 30px; /* Push card right to clear the line */
+  margin-left: 30px; 
   backdrop-filter: blur(10px);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy transition */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
   overflow: hidden;
 }
 
-/* The Glowing "Dot" on the timeline */
 .edu-card::before {
   content: "";
   position: absolute;
-  left: -43px; /* Positions dot on the vertical line */
+  left: -43px; 
   top: 35px;
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background: var(--accent-color);
-  border: 3px solid rgba(0, 0, 0, 0.5); /* Contrast border */
-  box-shadow: 0 0 10px var(--accent-color); /* Glow effect */
+  border: 3px solid rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 0 10px var(--accent-color); 
   z-index: 1;
   transition: all 0.3s ease;
 }
 
-/* Hover Effects */
 .edu-card:hover {
   transform: translateX(10px) scale(1.02);
   background: linear-gradient(
@@ -68,14 +63,12 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Make the dot turn purple and glow harder on hover */
 .edu-card:hover::before {
   background: var(--accent-purple);
   box-shadow: 0 0 20px var(--accent-purple);
   transform: scale(1.3);
 }
 
-/* Background Shine Animation on Hover */
 .edu-card::after {
   content: "";
   position: absolute;
@@ -96,7 +89,6 @@
   left: 100%;
 }
 
-/* Icon Styling */
 .edu-icon {
   min-width: 60px;
   height: 60px;
@@ -112,10 +104,9 @@
   color: #fff;
   font-size: 1.5rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  align-self: flex-start; /* Keeps icon at top if text is long */
+  align-self: flex-start; 
 }
 
-/* Text Styling */
 .edu-info {
   display: flex;
   flex-direction: column;
@@ -135,7 +126,6 @@
   margin-bottom: 10px;
 }
 
-/* Date Badge Styling */
 .edu-date {
   display: inline-block;
   align-self: flex-start;
@@ -155,14 +145,12 @@
   border-color: var(--accent-purple);
 }
 
-/* --- Mobile Responsiveness --- */
 @media (max-width: 600px) {
   .education-list {
     padding-left: 0;
     gap: 20px;
   }
 
-  /* Remove the timeline line on small screens */
   .education-list::before {
     display: none;
   }
@@ -175,13 +163,12 @@
     padding: 20px;
   }
 
-  /* Remove the timeline dot on small screens */
   .edu-card::before {
     display: none;
   }
 
   .edu-card:hover {
-    transform: translateY(-5px); /* Lift up instead of right on mobile */
+    transform: translateY(-5px); 
   }
 
   .edu-icon {
@@ -193,7 +180,6 @@
   }
 }
 
-/* --- Light Mode Adjustments --- */
 body.light-mode .edu-card {
   background: rgba(255, 255, 255, 0.6);
   border-color: rgba(0, 0, 0, 0.05);
@@ -211,5 +197,5 @@ body.light-mode .edu-date {
 }
 
 body.light-mode .edu-card::before {
-  border-color: #fff; /* White border for dot in light mode */
+  border-color: #fff; 
 }

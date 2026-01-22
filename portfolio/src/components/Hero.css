@@ -8,7 +8,6 @@
   overflow: hidden;
 }
 
-/* Background "Orbs" for atmosphere */
 .hero-container::before {
   content: "";
   position: absolute;
@@ -35,7 +34,6 @@
   color: #fff;
 }
 
-/* Gradient Text Effect for the Name */
 .hero-content h1 span.highlight {
   background: linear-gradient(
     to right,
@@ -118,7 +116,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  box-shadow: 0 0 50px rgba(0, 210, 255, 0.2); /* Glow behind image */
+  box-shadow: 0 0 50px rgba(0, 210, 255, 0.2); 
   position: relative;
 }
 
@@ -129,7 +127,6 @@
   filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.5));
 }
 
-/* --- Light Mode Overrides --- */
 body.light-mode .hero-content h1 {
   color: #2c3e50;
 }
