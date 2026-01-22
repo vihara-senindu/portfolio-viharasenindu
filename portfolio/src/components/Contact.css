@@ -1,0 +1,183 @@
+.contact-container {
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 80px;
+  align-items: flex-start; /* Aligns items to top */
+}
+
+/* --- Left Side (Info) --- */
+.contact-left {
+  flex: 1;
+}
+
+.contact-left h3 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  background: linear-gradient(to right, #fff, #ccc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.contact-left p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, var(--accent-purple), #5e35b1);
+  color: white;
+  padding: 16px 35px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 35px;
+  box-shadow: 0 10px 20px rgba(124, 77, 255, 0.3);
+  transition: all 0.3s;
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(124, 77, 255, 0.5);
+}
+
+.contact-socials {
+  justify-content: flex-start;
+}
+
+/* --- Right Side (Form) --- */
+.contact-right {
+  flex: 1.2;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-right h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: var(--accent-color);
+}
+
+.form-note {
+  font-size: 0.9rem;
+  opacity: 0.6;
+  margin-bottom: 25px;
+}
+
+.anon-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.glass-input {
+  width: 100%;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 210, 255, 0.1);
+}
+
+.glass-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.textarea-input {
+  height: 140px;
+  resize: none;
+}
+
+.form-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.form-btn:hover {
+  background: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Light Mode Overrides --- */
+body.light-mode .contact-right {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .contact-left h3 {
+  background: linear-gradient(to right, #333, #666);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+body.light-mode .glass-input {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .glass-input::placeholder {
+  color: #888;
+}
+
+body.light-mode .glass-input:focus {
+  background: #fff;
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .form-btn {
+  background: var(--accent-secondary);
+  color: white;
+}
+
+body.light-mode .form-btn:hover {
+  background: #2c3e50;
+}
+
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .contact-right {
+    width: 100%;
+    padding: 25px;
+  }
+}

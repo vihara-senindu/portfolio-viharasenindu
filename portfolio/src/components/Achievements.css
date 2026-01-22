@@ -1,0 +1,120 @@
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.ach-card {
+  background: rgba(30, 30, 40, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+/* Top colored border bar */
+.ach-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-purple));
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  transform-origin: left;
+}
+
+.ach-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.ach-card:hover::before {
+  transform: scaleX(1);
+}
+
+.ach-img-container {
+  width: 100%;
+  height: 160px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ach-img-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.ach-card:hover .ach-img-container img {
+  transform: scale(1.05);
+}
+
+.ach-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #fff;
+  min-height: 3rem; /* Aligns buttons even if title length varies */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ach-btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-sm {
+  padding: 6px 16px;
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s;
+}
+
+.btn-sm:hover {
+  background: var(--accent-color);
+  color: #000;
+  font-weight: 600;
+}
+
+/* --- Light Mode Overrides --- */
+body.light-mode .ach-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .ach-card h3 {
+  color: #333;
+}
+
+body.light-mode .btn-sm {
+  background: rgba(0, 0, 0, 0.05);
+  color: #333;
+}
+
+body.light-mode .btn-sm:hover {
+  background: var(--accent-secondary);
+  color: #fff;
+}

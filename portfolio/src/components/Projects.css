@@ -1,0 +1,173 @@
+/* Shared Grid Layout */
+.projects-grid, .design-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* --- Project Card Styling --- */
+.project-card, .design-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Hover Lift Effect */
+.project-card:hover, .design-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* --- Design Card Specifics (Images) --- */
+.design-img-container {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.design-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Zoom Image on Hover */
+.design-card:hover .design-img-container img {
+  transform: scale(1.1);
+}
+
+/* Overlay Gradient on Image */
+.design-img-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  opacity: 0.6;
+}
+
+.design-content {
+  padding: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.design-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.design-content p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Neon Button */
+.btn-design {
+  align-self: flex-start;
+  padding: 8px 20px;
+  background: transparent;
+  border: 1px solid var(--accent-purple);
+  color: var(--accent-purple);
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.design-card:hover .btn-design {
+  background: var(--accent-purple);
+  color: #fff;
+  box-shadow: 0 0 15px var(--accent-purple);
+}
+
+/* --- Open Source Card Specifics (Code) --- */
+.project-card { padding: 25px; }
+
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.book-icon {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+}
+
+.project-desc {
+  color: #bbb;
+  flex-grow: 1;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.project-stats {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.lang-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* --- Light Mode Overrides --- */
+body.light-mode .project-card, 
+body.light-mode .design-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Soft shadow for depth */
+}
+
+body.light-mode .project-header h3,
+body.light-mode .design-content h3 {
+  color: #222;
+}
+
+body.light-mode .project-desc,
+body.light-mode .design-content p,
+body.light-mode .project-stats {
+  color: #555;
+}
+
+body.light-mode .project-card:hover,
+body.light-mode .design-card:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--accent-secondary);
+}
+
+/* Make the Open Source icon pop */
+body.light-mode .book-icon {
+  color: var(--accent-secondary);
+}
+
+@media (max-width: 600px) {
+  .projects-grid, .design-grid { grid-template-columns: 1fr; }
+}
