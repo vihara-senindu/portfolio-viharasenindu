@@ -74,16 +74,40 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  color: var(--accent-secondary);
+
+  color: #ffffff;
+
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
+.skill-row h4 i {
+  color: var(--accent-color);
+  font-size: 1.3rem;
+  filter: drop-shadow(0 0 5px rgba(0, 210, 255, 0.5)); 
+}
+
+
+body.light-mode .skill-row h4 {
+  color: #333;
+  text-shadow: none;
+}
+
+body.light-mode .skill-row h4 i {
+  color: var(--accent-secondary);
+  filter: none;
+}
 .progress-bars-container {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-.progress-item { width: 100%; }
+.progress-item {
+  width: 100%;
+}
 
 .progress-label {
   font-size: 1rem;
@@ -97,7 +121,7 @@
   height: 10px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  overflow: hidden; 
+  overflow: hidden;
   position: relative;
 }
 
@@ -132,13 +156,24 @@
   border-radius: 10px;
 }
 
-@keyframes fillBar { from { width: 0; } }
-@keyframes stripeMove { 0% { background-position: 0 0; } 100% { background-position: 20px 20px; } }
+@keyframes fillBar {
+  from {
+    width: 0;
+  }
+}
+@keyframes stripeMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20px 20px;
+  }
+}
 
 body.light-mode .tech-item {
   background: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(0,0,0,0.05);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 body.light-mode .tech-item i {
@@ -160,7 +195,7 @@ body.light-mode .skill-row p {
 }
 
 body.light-mode .progress-track {
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 body.light-mode .progress-label {
@@ -169,5 +204,7 @@ body.light-mode .progress-label {
 }
 
 @media (max-width: 900px) {
-  .tech-icons-grid { justify-content: center; }
+  .tech-icons-grid {
+    justify-content: center;
+  }
 }

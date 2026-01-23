@@ -85,7 +85,9 @@ const Skills = () => {
               {skillDetails.map((skill, index) => (
                 <div
                   className={`skill-row ${
-                    skill.title === "Software Development" ? "software-skill" : ""
+                    skill.title === "Software Development"
+                      ? "software-skill"
+                      : ""
                   }`}
                   key={index}
                 >

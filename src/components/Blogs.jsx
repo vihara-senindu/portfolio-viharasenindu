@@ -4,14 +4,12 @@ import { useState, useEffect } from "react";
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
 
-  // Featured blog data
   const featuredBlog = {
     title: "Natural Fibers: Nature's Original Gift to Textiles",
     description:
       "Explore the fascinating world of natural fibers, their inherent properties, and why they remain nature's most enduring gift to the textile industry.",
     link: "https://medium.com/@viharasenindu/natural-fibers-natures-original-gift-to-textiles-c0c77e02e65d",
     pubDate: "2026-01-23",
-    // Optional: Add a category tag
     category: "Textile Tech" 
   };
 
@@ -50,7 +48,6 @@ const Blogs = () => {
     <section className="section-wrapper" id="blogs">
       <h2 className="section-title center-text">Latest Articles ✍️</h2>
       
-      {/* Container removed "glass-container" to let cards float freely */}
       <div className="blogs-container"> 
         <div className="blogs-grid">
           {blogs.map((item, index) => (
@@ -61,7 +58,6 @@ const Blogs = () => {
               className="blog-card" 
               key={index}
             >
-              {/* Visual Header: Uses a gradient pattern automatically */}
               <div className="blog-visual">
                 <div className="blog-category">
                    {item.categories && item.categories.length > 0 ? item.categories[0] : (item.category || "Article")}
