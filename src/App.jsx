@@ -42,7 +42,7 @@ function App() {
           <Education />
           <OpenSource />
           <Projects />
-          <Achievements />
+          {/* <Achievements /> */}
           <Blogs />
           <Contact />
           <Footer />
