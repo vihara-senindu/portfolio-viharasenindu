@@ -9,10 +9,12 @@ import Blogs from "./components/Blogs";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ContentProtection from "./components/ContentProtection"; 
+import ChatBot from "./components/ChatBot";
 
 function App() {
   return (
     <div className="App">
+      <ChatBot />
       <ContentProtection /> 
       <Navbar />
       <Hero />
